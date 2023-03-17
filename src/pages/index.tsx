@@ -1,6 +1,7 @@
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
 import styled from 'styled-components'
+import Header from '../components/Header'
 import { headerHeight } from '../styles/GlobalStyles'
 import Cashier from './Cashier'
 import Home from './Home'
@@ -8,11 +9,11 @@ import Home from './Home'
 export default function Pages(): React.ReactElement {
   return (
     <>
-        {/* header here */}
+        <Header />
         <Page>
             <Routes>
                 <Route path='/' element={<Home />} />
-                <Route path='/cashier' element={<Cashier />} />
+                <Route path='/products' element={<Cashier />} />
             </Routes>
         </Page>
     </>
