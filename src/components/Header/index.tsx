@@ -11,7 +11,7 @@ export default function Header(): React.ReactElement {
 
     const toggleShow = () => setShow(prev => !prev)
     return (
-      <HeaderContainer>
+      <HeaderContainer justify='space-between'>
         <CashierLogo onClick={() => navigate('/')}>
             <img src={Logo} alt="Cashier Logo" />
             <span>Cashier App</span>

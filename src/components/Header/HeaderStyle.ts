@@ -1,10 +1,9 @@
 import styled from "styled-components";
 import { FontSize1, headerHeight } from "../../styles/GlobalStyles";
+import { Flexbox, FlexboxProps } from "../../styles/_mixin";
 
-export const HeaderContainer = styled.header`
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+export const HeaderContainer = styled.header<FlexboxProps>`
+    ${Flexbox}
     height: ${headerHeight};
     width: 100%;
     padding: 0 4vw;
@@ -18,10 +17,8 @@ export const HeaderContainer = styled.header`
     }
 `
 export const CashierLogo = styled.div`
+    ${Flexbox}
     cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: max(10px, 1vw);
     img {
         width: 1.5rem;
     }

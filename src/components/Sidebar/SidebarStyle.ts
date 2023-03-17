@@ -1,12 +1,14 @@
 import styled from "styled-components"
 import { FaTimes } from 'react-icons/fa'
 import { Link } from "react-router-dom"
+import { Flexbox, FlexboxProps } from "../../styles/_mixin"
 
 type SidebarContainerProps = {
     show: boolean
 }
+type SidebarContainerFlexbox = SidebarContainerProps & FlexboxProps
 
-export const SidebarContainer = styled.div<SidebarContainerProps>`
+export const SidebarContainer = styled.div<SidebarContainerFlexbox>`
     width: 100%;
     height: 100%;
     position: fixed;
@@ -16,12 +18,11 @@ export const SidebarContainer = styled.div<SidebarContainerProps>`
     bottom: 0;
     transition: left 500ms ease;
     background-color: #dceeee;
-    display: flex;
-    align-items: center;
+    ${Flexbox}
     @media (min-width: 900px) {
-        position: static;
-        width: auto;
-        background-color: transparent;
+      position: static;
+      width: auto;
+      background-color: transparent;
     }
 `
 export const CloseIcon = styled(FaTimes)`
