@@ -21,11 +21,7 @@ export default function Pages(): React.ReactElement {
 }
 
 export const Page = styled.section`
-    padding: 0 2vw;
     margin: 0 auto;
     position: relative;
     top: ${headerHeight};
-    @media (min-width: 900px) {
-        padding: 0 1vw;
-    }
 `
