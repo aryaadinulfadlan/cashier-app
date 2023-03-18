@@ -3,6 +3,7 @@ import ProductLists from '../../components/ProductLists'
 import SearchResults from '../../components/SearchResults'
 import { Item } from '../../data/Items'
 import useAppStore from '../../stores/AppStore'
+import { currencyFormatter } from '../../utils'
 import { CashierContainer, Content, TopContent, TotalPrice } from './CashierStyle'
 
 export default function Cashier(): React.ReactElement {
@@ -38,7 +39,7 @@ export default function Cashier(): React.ReactElement {
       </Content>
       <TotalPrice justify='space-between'>
         <h3>Total</h3>
-        <h3>Rp {totalAmounts}</h3>
+        <h3>{currencyFormatter.format(totalAmounts)}</h3>
       </TotalPrice>
     </CashierContainer>
   )

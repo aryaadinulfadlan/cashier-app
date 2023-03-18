@@ -10,7 +10,7 @@ export const CashierContainer = styled.div`
     grid-template-rows: 1fr 50px;
 `;
 export const Content = styled.div`
-    background-color: #f0f0f0;
+    background-color: hsl(232, 70%, 93%);
     padding: 1rem 2vw;
     display: grid;
     grid-template-rows: auto 1fr 1fr;

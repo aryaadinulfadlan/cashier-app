@@ -5,6 +5,7 @@ import Header from '../components/Header'
 import { headerHeight } from '../styles/GlobalStyles'
 import Cashier from './Cashier'
 import Home from './Home'
+import NoMatch from './NoMatch'
 
 export default function Pages(): React.ReactElement {
   return (
@@ -14,6 +15,7 @@ export default function Pages(): React.ReactElement {
             <Routes>
                 <Route path='/' element={<Home />} />
                 <Route path='/products' element={<Cashier />} />
+                <Route path='*' element={<NoMatch />} />
             </Routes>
         </Page>
     </>

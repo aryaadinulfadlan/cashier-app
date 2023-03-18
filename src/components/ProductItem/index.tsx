@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { FaMinus, FaPlus, FaTimes } from 'react-icons/fa'
 import { Item } from '../../data/Items'
 import useAppStore from '../../stores/AppStore'
+import { currencyFormatter } from '../../utils'
 import { BtnWrap, Desc, ImgWrap, ProductCount, ProductCountWrapper, ProductDesc, ProductItemContainer } from './ProductItemStyle'
 
 type ProductItemProps = {
@@ -56,7 +57,7 @@ export default function ProductItem({ item, handleRemoveProduct }: ProductItemPr
                         <FaPlus />
                     </button>
                 </BtnWrap>
-                <p>Rp, {sum}</p>
+                <p>{currencyFormatter.format(sum)}</p>
             </ProductCount>
             <FaTimes onClick={() => handleRemoveProduct(id.toString(), sum)} />
         </ProductCountWrapper>
