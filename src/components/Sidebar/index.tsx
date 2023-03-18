@@ -16,20 +16,20 @@ export default function Sidebar({ show, setShow }: SidebarProps): React.ReactEle
             <Link to={'/products'}>Products</Link>
           </li>
           <li onClick={() => setShow(false)}>
-            <Link to={'/'}>Layanan</Link>
+            <Link to={'/'}>Services</Link>
           </li>
           <li onClick={() => setShow(false)}>
-            <Link to={'/'}>Integrasi</Link>
+            <Link to={'/'}>Account</Link>
           </li>
           <li onClick={() => setShow(false)}>
-            <Link to={'/'}>Lainnya</Link>
+            <Link to={'/'}>Others</Link>
           </li>
           <BtnWrap>
             <li onClick={() => setShow(false)}>
               <LoginButton to={'/'}>login</LoginButton>
             </li>
             <li onClick={() => setShow(false)}>
-              <DaftarButton to={'/'}>daftar</DaftarButton>
+              <DaftarButton to={'/'}>register</DaftarButton>
             </li>
           </BtnWrap>
         </Menu>
